@@ -17,7 +17,7 @@
           select.custom-select#childs_months
             option [disabled selected value]
               =t('.form.childs_months_label')
-            - (0..10).each do |month|
+            - (0..11).each do |month|
               option value = month
                 = month
                 = t('.form.months')
