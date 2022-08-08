@@ -24,7 +24,5 @@ module ZeroWaste
     # config.eager_load_paths << Rails.root.join("extras")
     config.i18n.available_locales = %i[en uk]
     config.i18n.default_locale = :en
-    
-    config.assets.initialize_on_precompile = false
   end
 end
