@@ -25,7 +25,7 @@
 name: Deploy
 
 on:
-  push:
+  pull:
     branches:
       - develop
 
