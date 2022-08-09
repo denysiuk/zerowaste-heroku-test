@@ -41,9 +41,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: echo ${{ secrets.ENV }} | base64 -d > .env
-      - run: echo ${{ secrets.ENV_DB }} | base64 -d > .env.db
-      - run: echo ${{ secrets.MASTER_KEY }} > config/credentials/production.key
+
+    - run: echo ${{ secrets.ENV }} > .env
+    - run: echo ${{ secrets.ENV_DB }} | base64 -d > .env.db
+    - run: echo ${{ secrets.MASTER_KEY }} > config/credentials/production.key
 
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
